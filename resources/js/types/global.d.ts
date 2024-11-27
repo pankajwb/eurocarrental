@@ -8,8 +8,13 @@ declare global {
         axios: AxiosInstance;
     }
 
-    /* eslint-disable no-var */
     var route: typeof ziggyRoute;
+}
+
+declare module 'vue' {
+    interface ComponentCustomProperties {
+        route: typeof ziggyRoute;
+    }
 }
 
 declare module '@inertiajs/core' {
